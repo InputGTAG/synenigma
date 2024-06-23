@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enigma Puzzle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .puzzle {
+            margin: 20px;
+        }
+        .input-box {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Enigma Puzzle!</h1>
+    <div class="puzzle">
+        <p>Solve this riddle to proceed:</p>
+        <p>What has keys but can't open locks?</p>
+        <div class="input-box">
+            <input type="text" id="answer" placeholder="Your answer here">
+            <button onclick="checkAnswer()">Submit</button>
+        </div>
+        <p id="result"></p>
+    </div>
+    <script>
+        function checkAnswer() {
+            const answer = document.getElementById('answer').value.toLowerCase();
+            const result = document.getElementById('result');
+            if (answer === 'piano') {
+                result.textContent = 'Correct! A piano has keys but can\'t open locks.';
+            } else {
+                result.textContent = 'Incorrect, try again!';
+            }
+        }
+    </script>
+</body>
+</html>
